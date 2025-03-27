@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>How To Write Better</title>  
+    <style>  
+        body, html {  
+            margin: 0;  
+            padding: 0;  
+            width: 100%;  
+            height: 100%;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            flex-direction: column;  
+        }  
+        input, button {  
+            margin: 10px;  
+            padding: 10px;  
+            font-size: 16px;  
+            width: 80%;  
+            max-width: 400px;  
+        }  
+        button {  
+            cursor: pointer;  
+            background-color: #007BFF;  
+            color: white;  
+            border: none;  
+            padding: 10px;  
+            font-size: 18px;  
+            border-radius: 5px;  
+        }  
+        button:hover {  
+            background-color: #0056b3;  
+        }  
+        iframe {  
+            width: 100%;  
+            height: 100%;  
+            border: none;  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <b>BOOM BOOM BOOM BOOM BOOM</b>
+  
+    <input type="password" id="password" placeholder="Enter Password">  
+    <input type="url" id="url" placeholder="Enter URL">  
+    <button id="startButton">Start</button>  
+  
+    <script>  
+        const correctPassword = "LowTaperFade"; // Change this to your desired password  
+  
+        document.getElementById("startButton").addEventListener("click", function() {  
+            const passwordInput = document.getElementById("password").value;  
+            const urlInput = document.getElementById("url").value;  
+  
+            if (passwordInput === correctPassword && urlInput.trim() !== "") {  
+                document.body.innerHTML = `<iframe src="${urlInput}"></iframe>`;  
+            }  
+        });  
+    </script>  
+  
+</body>  
+</html>
